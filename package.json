@@ -7,7 +7,9 @@
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-slick": "^0.28.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "dev": "next",
