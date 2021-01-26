@@ -5,10 +5,10 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Image from "next/image";
 import Carousel from "./Carousel";
+import UserActions from "./UserActions";
 
 const useStyles = makeStyles({
   root: {
@@ -118,43 +118,43 @@ export default function TabsContent({ data, tabName }) {
                       <Typography className={classes.px16}>
                         <h3 style={{ marginBottom: 0 }}>Apartamento 60m2</h3>
                         <p style={{ color: "#6E7A91", marginTop: 0 }}>
-                          Rua Avenida patente,
-                          <br /> São Bernardo, São Paulo
+                          {card.street},
+                          <br /> {card.district}, {card.state}
                         </p>
                       </Typography>
                       <Typography style={{ marginBottom: 0 }}>
                         <div className={classes.when}>
                           <p style={{ color: "#6E7A91" }}>Quando?</p>
                           <div className={classes.date}>
-                            16 de set 2020 | 14:30
+                            {card.date} | {card.time}
                           </div>
                         </div>
                       </Typography>
                       <div className={classes.profile}>
                         <Image
-                          src="/images/profile.png"
+                          src={card.broker.profilePicture}
                           width={32}
                           height={32}
                           layout="fixed"
                         />
                         <Typography style={{ marginLeft: 8 }}>
                           <h4 className={classes.brokerName}>
-                            Vanessa Vasconcelos
+                            {card.broker.name}
                           </h4>
-                          <p className={classes.brokerRole}>Corretora</p>
+                          <p className={classes.brokerRole}>
+                            {card.broker.role}
+                          </p>
                         </Typography>
                       </div>
                     </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button
-                      size="small"
-                      color="primary"
-                      style={{ margin: "0 auto" }}
-                    >
-                      Visualizar anúncio
-                    </Button>
-                  </CardActions>
+                  {tabName === "accepted" || tabName === "confirmation" ? (
+                    <CardActions>
+                      <UserActions tab={tabName} />
+                    </CardActions>
+                  ) : (
+                    ""
+                  )}
                 </Card>
               </Grid>
             ))

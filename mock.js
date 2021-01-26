@@ -9,6 +9,7 @@ const data = {
       date: "16 de set 2020",
       time: "14:30",
       broker: {
+        profilePicture: "/images/profile.png",
         name: "Vanessa Vasconcelos",
         role: "Corretora",
       },
@@ -19,10 +20,11 @@ const data = {
       street: "Rua Avenida Patente",
       district: "São Bernardo",
       state: "São Paulo",
-      date: "16 de set 2020",
-      time: "14:30",
+      date: "17 de set 2020",
+      time: "13:30",
       broker: {
-        name: "Vanessa Vasconcelos",
+        profilePicture: "/images/profile.png",
+        name: "Cláudia dos Santos",
         role: "Corretora",
       },
     },
@@ -37,6 +39,7 @@ const data = {
       date: "16 de set 2020",
       time: "14:30",
       broker: {
+        profilePicture: "/images/profile.png",
         name: "Vanessa Vasconcelos",
         role: "Corretora",
       },
@@ -53,6 +56,7 @@ const data = {
       date: "16 de set 2020",
       time: "14:30",
       broker: {
+        profilePicture: "/images/profile.png",
         name: "Vanessa Vasconcelos",
         role: "Corretora",
       },
@@ -69,6 +73,7 @@ const data = {
       date: "16 de set 2020",
       time: "14:30",
       broker: {
+        profilePicture: "/images/profile.png",
         name: "Vanessa Vasconcelos",
         role: "Corretora",
       },
@@ -82,6 +87,7 @@ const data = {
       date: "16 de set 2020",
       time: "14:30",
       broker: {
+        profilePicture: "/images/profile.png",
         name: "Vanessa Vasconcelos",
         role: "Corretora",
       },
